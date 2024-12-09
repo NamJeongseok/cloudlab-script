@@ -8,4 +8,8 @@ cd ./cmake-3.16.9
 make
 sudo make install
 
-camke --version
+cmake --version
+
+cd ..
+sudo rm -rf ./cmake-3.16.9
+sudo rm -rf ./cmake-3.16.9.tar.gz
