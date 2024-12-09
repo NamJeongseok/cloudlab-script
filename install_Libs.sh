@@ -11,6 +11,8 @@ make all check CXXFLAGS="-g -O3"
 sudo make install
 cd ..
 
+sudo rm -rf ./cityhash
+
 # boost
 wget https://jaist.dl.sourceforge.net/project/boost/boost/1.65.1/boost_1_65_1.tar.gz
 tar -xvf ./boost_1_65_1.tar.gz
@@ -21,6 +23,9 @@ cd boost_1_65_1
 sudo apt-get -y --force-yes install libboost-all-dev
 cd ..
 
+sudo rm -rf ./boost_1_65_1
+sudo rm -rf ./boost_1_65_1.tar.gz
+
 # tbb
 git clone https://github.com/wjakob/tbb.git
 cd tbb/build
@@ -29,6 +34,8 @@ make -j
 sudo make install
 ldconfig
 cd ../..
+
+sudo rm -rf ./tbb
 
 # openjdk-8
 sudo apt-get -y --force-yes install openjdk-8-jdk
